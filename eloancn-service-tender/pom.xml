@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>eloancn</artifactId>
+        <groupId>eloancn</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>eloancn-service-tender</artifactId>
+    <packaging>war</packaging>
+    <name>eloancn-service-tender Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>eloancn</groupId>
+            <artifactId>eloancn-common</artifactId>
+            <version>${eloancn-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eloancn</groupId>
+            <artifactId>eloancn-common-config</artifactId>
+            <version>${eloancn-common-config.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eloancn</groupId>
+            <artifactId>eloancn-facade-tender</artifactId>
+            <version>${eloancn-facade-tender.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>eloancn-service-tender</finalName>
+    </build>
+</project>

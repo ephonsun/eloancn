@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>eloancn</artifactId>
+        <groupId>eloancn</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>eloancn-web-tender</artifactId>
+    <packaging>war</packaging>
+    <name>eloancn-web-tender Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>eloancn</groupId>
+            <artifactId>eloancn-common</artifactId>
+            <version>${eloancn-common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eloancn</groupId>
+            <artifactId>eloancn-common-config</artifactId>
+            <version>${eloancn-common-config.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>eloancn</groupId>
+            <artifactId>eloancn-facade-tender</artifactId>
+            <version>${eloancn-facade-tender.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>eloancn-web-tender</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>8.1.8.v20121106</version>
+                <configuration>
+                    <scanIntervalSeconds>15</scanIntervalSeconds>
+                    <webAppConfig>
+                        <contextPath>/</contextPath>
+                        <allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
+                    </webAppConfig>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
